@@ -1,0 +1,32 @@
+---
+- name: Commit and push to GitHub
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars:
+    git_repo_path: /media/cristian/Development3/ALERT/client
+    git_repo_url: https://github.com/cristian1534/test-ansible.git
+    git_branch: master
+    git_commit_msg: "Updating by Ansible  "
+
+  tasks:
+    - name: Configurar credenciales de Git
+      shell: |  
+        git config user.email "cmachuca32@gmail.com"
+        git config user.name "cristian1534"
+
+    - name: Git add
+      command: git add .
+      args:
+        chdir: "{{ git_repo_path }}"
+
+    - name: Git commit
+      command: git commit -m "{{ git_commit_msg }}"
+      args:
+        chdir: "{{ git_repo_path }}"
+
+    - name: Git push
+      command: git push origin {{ git_branch }}
+      args:
+        chdir: "{{ git_repo_path }}"
