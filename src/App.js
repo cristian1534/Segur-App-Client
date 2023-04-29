@@ -3,6 +3,7 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PrivateRoute from "./middleware/PrivateRoute";
 
+
 //components
 const Layout = lazy(() => import("./components/Layout"));
 const Loader = lazy(() => import("./components/Loader"));
