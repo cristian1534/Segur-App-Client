@@ -61,7 +61,7 @@ const Register_Form = () => {
                   <div className="form-outline form-white ">
                     <input
                       type="text"
-                      required="required"
+                      required
                       name="telephone"
                       id="typeTelephoneX"
                       className="form-control form-control-lg"
@@ -76,7 +76,7 @@ const Register_Form = () => {
                   <div className="form-outline form-white mb-4">
                     <input
                       type="text"
-                      required="required"
+                      required
                       placeholder="Juan Perez"
                       name="Contraseñaname"
                       id="typeNameX"
@@ -90,7 +90,6 @@ const Register_Form = () => {
 
                   <div className="form-outline form-white mb-4">
                     <input
-                      required="required"
                       type="email"
                       placeholder="example@gmail.com"
                       name="email"
@@ -106,7 +105,7 @@ const Register_Form = () => {
                   <div className="form-outline form-white mb-4">
                     <input
                       type="password"
-                      aria-required="required"
+                      required  
                       placeholder="min 6 caracteres"
                       name="password"
                       id="typePasswordX"

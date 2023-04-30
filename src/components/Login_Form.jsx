@@ -63,7 +63,7 @@ const Login_Form = () => {
                   <div className="form-outline form-white mb-4">
                     <input
                       type="email"
-                      required="true"
+                      required
                       name="email"
                       onChange={handle_change}
                       id="typeEmailX"
@@ -77,7 +77,7 @@ const Login_Form = () => {
                   <div className="form-outline form-white mb-4">
                     <input
                       type="password"
-                      required="true"
+                      required
                       name="password"
                       onChange={handle_change}
                       id="typePasswordX"
